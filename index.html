@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Apex Dic: Türkçe 🇹🇷</title>
+  <title>Apex Dic | Türkçe 🇹🇷</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Vazirmatn:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -378,13 +378,13 @@
 <!-- FLOATING LANG BUTTON -->
 <button id="langBtn" onclick="toggleLang()">
   <span>🌐</span>
-  <span id="langLabel">English</span>
+  <span id="langLabel">English 🇬🇧</span>
 </button>
 
 <div class="page">
 
   <header>
-    <div class="logo">APEX DIC: Türkçe <span class="logo-flag">🇹🇷</span></div>
+    <div class="logo">APEX DIC | Türkçe <span class="logo-flag">🇹🇷</span></div>
     <div class="hline"></div>
     <div class="subtitle">Turkish Morphology &amp; Declension Dictionary</div>
   </header>
@@ -407,7 +407,7 @@ function toggleLang(){
   lang = lang==='fa'?'en':'fa';
   document.body.classList.toggle('lfa', lang==='fa');
   document.body.classList.toggle('len', lang==='en');
-  document.getElementById('langLabel').textContent = lang==='fa'?'English':'Persian';
+  document.getElementById('langLabel').textContent = lang==='fa'?'English 🇬🇧':'Persian';
 }
 
 // ─── LOADING BAR ───
