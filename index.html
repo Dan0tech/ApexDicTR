@@ -392,7 +392,7 @@
   <div class="search-wrap">
     <div class="tr-badge">TR</div>
     <input type="text" id="wordInput" placeholder="Bir kelime yazın..(ör: elma,gitmek)" autocomplete="off" spellcheck="false"/>
-    <button id="searchBtn" onclick="analyze()">🔍→</button>
+    <button id="searchBtn" onclick="analyze()">Search🔍</button>
   </div>
 
   <div id="results"></div>
@@ -926,7 +926,7 @@ async function analyze(){
     doneLoad();
     res.innerHTML=`<div class="err-box">⚠️ خطا / Error: ${err.message}<br><small>لطفاً دوباره تلاش کنید / Please try again.</small></div>`;
   }
-  btn.disabled=false; btn.textContent='SEARCH →';
+  btn.disabled=false; btn.textContent='SEARCH🔍';
 }
 
 // ─── RENDER ───
