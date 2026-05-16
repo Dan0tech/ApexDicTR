@@ -378,7 +378,7 @@
 <!-- FLOATING LANG BUTTON -->
 <button id="langBtn" onclick="toggleLang()">
   <span>🌐</span>
-  <span id="langLabel">English🇬🇧</span>
+  <span id="langLabel">English 🇬🇧</span>
 </button>
 
 <div class="page">
@@ -402,12 +402,12 @@
 
 <script>
 // ─── LANG ───
-let lang = 'en';
+let lang = 'fa';
 function toggleLang(){
-  lang = lang==='en'?'fa':'en';
+  lang = lang==='fa'?'en':'fa';
   document.body.classList.toggle('lfa', lang==='fa');
   document.body.classList.toggle('len', lang==='en');
-  document.getElementById('langLabel').textContent = lang==='fa'?'English🇬🇧':'Persian';
+  document.getElementById('langLabel').textContent = lang==='fa'?'English🇬🇧':'Persian𓄂𓆃';
 }
 
 // ─── LOADING BAR ───
