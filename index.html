@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Apex Dic: Türkçe 🇹🇷</title>
+  <title>Apex Dic ¦ TR 🇹🇷</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Vazirmatn:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -378,21 +378,21 @@
 <!-- FLOATING LANG BUTTON -->
 <button id="langBtn" onclick="toggleLang()">
   <span>🌐</span>
-  <span id="langLabel">English</span>
+  <span id="langLabel">English🇬🇧</span>
 </button>
 
 <div class="page">
 
   <header>
-    <div class="logo">APEX DIC: Türkçe <span class="logo-flag">🇹🇷</span></div>
+    <div class="logo">APEX DIC ¦ Türkçe <span class="logo-flag">🇹🇷</span></div>
     <div class="hline"></div>
     <div class="subtitle">Turkish Morphology &amp; Declension Dictionary</div>
   </header>
 
   <div class="search-wrap">
     <div class="tr-badge">TR</div>
-    <input type="text" id="wordInput" placeholder="Bir kelime yazın… (ör: elma, gitmek)" autocomplete="off" spellcheck="false"/>
-    <button id="searchBtn" onclick="analyze()">SEARCH →</button>
+    <input type="text" id="wordInput" placeholder="Bir kelime yazın..(ör: elma,gitmek)" autocomplete="off" spellcheck="false"/>
+    <button id="searchBtn" onclick="analyze()">🔍→</button>
   </div>
 
   <div id="results"></div>
@@ -402,12 +402,12 @@
 
 <script>
 // ─── LANG ───
-let lang = 'fa';
+let lang = 'en';
 function toggleLang(){
-  lang = lang==='fa'?'en':'fa';
+  lang = lang==='en'?'fa':'en';
   document.body.classList.toggle('lfa', lang==='fa');
   document.body.classList.toggle('len', lang==='en');
-  document.getElementById('langLabel').textContent = lang==='fa'?'English':'Persian';
+  document.getElementById('langLabel').textContent = lang==='fa'?'English🇬🇧':'Persian';
 }
 
 // ─── LOADING BAR ───
@@ -675,7 +675,7 @@ async function resolveWord(raw){
   return {word,stem,lex,wiki,fa:finalFa,en:finalEn,pos,hasMeaning:Boolean(finalFa||finalEn||wiki.exists)};
 }
 function translationOnly(r,reason){
-  const fa=r.fa || `ترجمه قابل اعتمادی برای «${r.word}» پیدا نشد.`;
+  const fa=r.fa || `ترجمه قابل اعتمادی برای~ «${r.word}» پیدا نشد.`;
   const en=r.en || `No reliable translation was found for “${r.word}”.`;
   const msg={
     invalid:['این ورودی به عنوان واژه معتبر ترکی برای صرف اسم یا فعل تشخیص داده نشد؛ بنابراین حالت‌های گرامری ساخته نشد و فقط ترجمه احتمالی نمایش داده می‌شود.','This input was not recognized as a valid Turkish noun or verb for morphology, so only the likely translation is shown.'],
